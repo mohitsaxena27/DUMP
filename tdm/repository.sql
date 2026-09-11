@@ -1,0 +1,24 @@
+USE `tdm`;
+SET FOREIGN_KEY_CHECKS=0;
+
+DROP TABLE IF EXISTS `repository`;
+CREATE TABLE `repository` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) DEFAULT NULL,
+  `created` datetime DEFAULT CURRENT_TIMESTAMP,
+  `updated` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO `repository` (`id`,`name`,`created`,`updated`) VALUES
+(3,'demo2','2024-10-29 00:52:59','2026-08-05 13:24:22'),
+(37,'Test','2024-12-02 04:36:28','2024-12-02 04:36:28'),
+(41,'P&P Dev','2026-04-29 16:54:13','2026-04-29 16:54:13'),
+(42,'Application Details','2026-04-29 16:54:45','2026-04-29 16:54:45'),
+(43,'testing1243','2026-04-30 04:26:28','2026-04-30 04:26:28'),
+(45,'Project 1 Dev','2026-05-20 03:16:31','2026-05-20 03:16:31'),
+(47,'New Folder','2026-06-03 04:43:35','2026-06-03 04:43:35'),
+(48,'Farward _Salesforce_QA','2026-06-03 04:44:01','2026-06-03 04:44:01'),
+(49,'aca','2026-07-02 06:24:30','2026-07-02 06:24:30');
+
+SET FOREIGN_KEY_CHECKS=1;
